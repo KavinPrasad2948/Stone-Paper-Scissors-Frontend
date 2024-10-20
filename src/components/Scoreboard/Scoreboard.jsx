@@ -8,7 +8,7 @@ const Scoreboard = ({ gameData }) => {
     const postGameData = async () => {
         console.log('Posting game data:', gameData);  // Add this line to check the gameData structure
         try {
-            const response = await axios.post('http://localhost:5000/api/games/create', gameData);
+            const response = await axios.post('https://stone-paper-scissors-backend.onrender.com/api/games/create', gameData);
             console.log('Data posted successfully:', response.data);
         } catch (error) {
             console.error('Error posting game data:', error);

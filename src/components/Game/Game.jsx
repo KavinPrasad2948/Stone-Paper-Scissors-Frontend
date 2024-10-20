@@ -51,7 +51,7 @@ const Game = ({ onGameData }) => {
     
             // Post the game data to the backend
             try {
-                const response = await axios.post('http://localhost:5000/api/games/create', newRoundData);
+                const response = await axios.post('https://stone-paper-scissors-backend.onrender.com/api/games/create', newRoundData);
                 console.log('Data posted successfully:', response.data);
             } catch (error) {
                 console.error('Error posting game data:', error.response ? error.response.data : error.message);
